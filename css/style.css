@@ -257,11 +257,23 @@ body {
 }
 
 .item-categories {
-  position: relative;
+  overflow: hidden;
+  min-height: 300px;
   border-radius: 8px;
   background-color: #fff;
   box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
   transition: box-shadow 0.3s;
+  position: relative;
+}
+.item-categories::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%,0px);
+  width: 251px;
+  height: 192px;
+  background: url('../img/categories/ellipse.svg') 0 0 no-repeat;
 }
 .item-categories::after {
   content: "";
@@ -296,6 +308,14 @@ body {
   color: #b1b1b1;
 }
 .item-categories__image {
+}
+
+.item-categories__image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .main__popular {
